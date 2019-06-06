@@ -1,52 +1,26 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Required styles for MDC Web -->
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-    <!-- Required styles for MDC Icon -->
+    <link rel="stylesheet" href="dist/bundle.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- Required MDC Web JavaScript library -->
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-
   </head>
   <body>
-    <header class=" mdc-top-app-bar mdc-top-app-bar--short">
-    <div class="mdc-top-app-bar__row">
+    <header class="mdc-top-app-bar ">
+      <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-        <button class="material-icons mdc-top-app-bar__navigation-icon--unbounded">menu</button><span class="mdc-top-app-bar__title">San Francisco, CA</span> </section>
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-        <button class="material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Bookmark this page">bookmark</button>
+          <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
+          <span class="mdc-top-app-bar__title">Title</span>
         </section>
-    </div>
+      </div>
     </header>
+    <br>
+    <br>/
+    <br>
+    <h1>Hello World
+    <button class="foo-button mdc-button">
+      Button
+    </button>
 
-    <h1> test </h1>
-    <h1> test </h1>
-    <h1> test </h1>
-
-    <h6 class="mdc-typography mdc-typography--headline6 demo-headline">MDC Web Quick Start</h6>
-
-    <div class="mdc-text-field">
-    <input type="text" id="my-text-field" class="mdc-text-field__input first-name-input">
-    <label class="mdc-floating-label" for="my-text-field">First name</label>
-    <div class="mdc-line-ripple"></div>
-    </div>
-
-    <div class="mdc-text-field">
-    <input type="text" id="my-text-field" class="mdc-text-field__input last-name-input">
-    <label class="mdc-floating-label" for="my-text-field" >Last name</label>
-    <div class="mdc-line-ripple"></div>
-    </div>
-    <button class="mdc-button greet-button">Greet</button>
-
-    <div class="mdc-typography mdc-typography--overline greet-message"></div>
-
-    <button class="foo-button mdc-button">Button</button>
-
-    <footer></footer>
-
-    <!-- Current page: {{ page.url | url }} -->
+  <script src="dist/bundle.js" async></script>
   </body>
 </html>
