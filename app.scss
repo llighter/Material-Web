@@ -12,6 +12,7 @@
 @import "@material/card/mdc-card";
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/typography/mixins";
+@import "@material/typography/mdc-typography";
 
 :root {
     --red: #C5004A;
@@ -97,4 +98,10 @@ $card-secondary-baseline: 16px;
 
 .mdc-card__actions { 
     justify-content: flex-end; 
+}
+
+// 제목 내용을 가운데 정렬하기
+.yunha-inc-title {
+    text-align: center;
+    padding-bottom: 3em;
 }
