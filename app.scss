@@ -1,6 +1,17 @@
+// Imports the Styles for each Material Component
 @import "@material/button/mdc-button";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/card/mdc-card";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
+@import "@material/tab/mixins";
+@import "@material/tab-indicator/mixins";
+@import "@material/ripple/mixins";
+@import "@material/card/mdc-card";
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/typography/mixins";
 
 :root {
     --red: #C5004A;
@@ -13,13 +24,9 @@
     --white: #fff;
 }
 
-.foo_button {
-    @include mdc-button-ink-color(teal);
-    @include mdc-states(teal);
-}
-
+// Top App Bar 색상 설정
 .mdc-top-app-bar {
-    @include mdc-top-app-bar-fill-color(teal);
+    @include mdc-top-app-bar-fill-color(black);
 }
 
 // Top App Bar 쓸 때 화면 모서리에 붙게 해야 한다.
@@ -28,12 +35,66 @@ body {
     margin: 0;
 }
 
-// card
-.my-card-content {
-padding: 16px;
+// tab bar의 높이와 맞추기 위해 임의 조정
+// TODO: 상위 항목을 맞추는게 아니라 아래 항목을 위에 항목의 높이를 상속 받아서 처리해야 할 것 같다.
+// .mdc-top-app-bar {
+//   height: 49px;
+// }
+
+// tab indicator 높이 조정
+// .mdc-tab-indicator {
+//     @include mdc-tab-indicator-underline-height(1em);
+// }
+
+// tab 색깔을 하얀색으로 설정
+.yunha-inc-tab {
+    @include mdc-tab-text-label-color(white);
+    @include mdc-tab-icon-color(white);
+
+    .mdc-tab__ripple {
+        @include mdc-states(white);
+    }
 }
 
-.my-card {
-    height: 350px;
-    width: 350px;
+// tab 아래에 어떤 tab이 활성화 상태인지 알 수있게 해주는 indicator의 색 지정
+.yunha-inc-tab-indicator {
+    @include mdc-tab-indicator-underline-color(white);
+}
+
+// 여기도 마찬가지로 br이 아니라 padding-top을 주었다.
+.yunha-inc--fixed-adjust {
+    padding-top: 112px;
+}
+
+// Card
+// 한 카드당 넓이 최대길이를 설정
+.yunha-inc-cards {
+    max-width: 1480px;
+}
+
+
+$card-text-label-baseline: 16px;
+
+.yunha-inc-card .mdc-card__actions {
+    margin-top: auto;
+}
+
+.yunha-inc-card__text-label {
+    margin: 0 16px;
+    @include mdc-typography(headline6);
+    @include mdc-typography-baseline-top(32px);
+    @include mdc-typography-baseline-bottom(-$card-text-label-baseline);
+}
+
+$card-secondary-baseline: 16px;
+
+.yunha-inc-card__secondary {
+  margin: 0 16px;
+  @include mdc-typography(body2);
+  @include mdc-typography-baseline-top(24px);
+  @include mdc-typography-baseline-bottom(-$card-secondary-baseline);
+}
+
+.mdc-card__actions { 
+    justify-content: flex-end; 
 }

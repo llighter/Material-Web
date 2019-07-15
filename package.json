@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack -p",
+    "build": "webpack -p && cp index.html dist && cp -r media dist",
     "//": "If you are building your app locally, in the following line remove everything after webpack-dev-server",
     "start-remote": "webpack-dev-server --host 0.0.0.0 --disable-host-check --public $PROJECT_DOMAIN.glitch.me",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,7 +29,10 @@
   "dependencies": {
     "@material/button": "^2.3.0",
     "@material/card": "^3.0.0",
+    "@material/layout-grid": "^3.0.0",
     "@material/ripple": "^2.3.0",
+    "@material/tab": "^3.0.0",
+    "@material/tab-bar": "^3.0.0",
     "@material/top-app-bar": "^2.3.0",
     "@material/typography": "^2.3.0"
   },
