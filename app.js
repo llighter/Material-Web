@@ -47,10 +47,17 @@ listEl.addEventListener('click', (event) => {
   drawer.open = false;
 });
 
+// Deprecated
 // TODO: 일단 위에 방식과 반대 방식으로 했는데 이게 맞는지 확인
-menu.addEventListener('click', (e) => {
-    drawer.open = true;
-})
+// menu.addEventListener('click', (e) => {
+//     drawer.open = true;
+// })
+
+// drawer를 열 때 공식문서에서 사용하는 예제
+topAppBar.setScrollTarget(document.getElementById('main-content'));
+topAppBar.listen('MDCTopAppBar:nav', () => {
+  drawer.open = !drawer.open;
+});
 
 // TODO: 예제에 있는 코드인데 어떤 의미인지 파악해야 한다.
 // 입력값이 있으면 그 곳으로 포커싱을 옮기는다는것 같은데 내 사이트에서 필요한지는 의문이다.
