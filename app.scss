@@ -13,6 +13,8 @@
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/typography/mixins";
 @import "@material/typography/mdc-typography";
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
 
 // 미디어 쿼리 적용
 @import "/src/styles/tools/breakpoints";
