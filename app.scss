@@ -14,6 +14,9 @@
 @import "@material/typography/mixins";
 @import "@material/typography/mdc-typography";
 
+// 미디어 쿼리 적용
+@import "/src/styles/tools/breakpoints";
+
 :root {
     --red: #C5004A;
     --darkred: #7F0036;
@@ -68,9 +71,16 @@ body {
 }
 
 // Card
-// 한 카드당 넓이 최대길이를 설정
+// 카드들을 보여주는 공간의 최대 넓이
 .yunha-inc-cards {
-    max-width: 1480px;
+    // max-width: 1480px;
+    @include bp(lg) {
+        max-width: 1200px;
+    }
+
+    @include bp(md) {
+        max-width: 800px;
+    }
 }
 
 
